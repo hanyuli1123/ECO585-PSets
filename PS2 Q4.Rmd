@@ -1,0 +1,17 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+1. 
+
+```{r}
+glaeser <- read.csv("C:\\Users\\19177\\Documents\\ECO585\\glaeserdata.csv")
+#Importing dataset
+logsch <- log(glaeser$yrssch_av)
+#logging yrssch_av
+reg1 <- lm(loginc2000 ~ logsch+govcons+temperate+loginc_0, data=glaeser)
+summary(reg1)
+#Running OLS regression of question 1
+```
+
